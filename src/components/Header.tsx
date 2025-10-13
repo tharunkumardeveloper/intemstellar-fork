@@ -27,20 +27,6 @@ const Header = () => {
         scrolled ? "bg-background/95 backdrop-blur-lg shadow-lg shadow-primary/10" : "bg-transparent"
       }`}
     >
-      {/* Marquee */}
-      <div className="bg-primary/20 border-b border-primary/30 overflow-hidden py-2">
-        <div className="flex whitespace-nowrap animate-marquee">
-          <span className="text-sm font-semibold text-primary mx-8">NOW STREAMING...</span>
-          <span className="text-sm text-muted-foreground mx-8">InTEMStellar 2025</span>
-          <span className="text-sm font-semibold text-primary mx-8">NOW STREAMING...</span>
-          <span className="text-sm text-muted-foreground mx-8">InTEMStellar 2025</span>
-          <span className="text-sm font-semibold text-primary mx-8">NOW STREAMING...</span>
-          <span className="text-sm text-muted-foreground mx-8">InTEMStellar 2025</span>
-          <span className="text-sm font-semibold text-primary mx-8">NOW STREAMING...</span>
-          <span className="text-sm text-muted-foreground mx-8">InTEMStellar 2025</span>
-        </div>
-      </div>
-
       {/* Main Header */}
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">

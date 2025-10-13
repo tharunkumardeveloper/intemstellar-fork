@@ -88,6 +88,18 @@ export default {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "0.6" },
+          "50%": { opacity: "1" },
+        },
+        shimmer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        glow: {
+          "0%, 100%": { filter: "brightness(1) drop-shadow(0 0 10px currentColor)" },
+          "50%": { filter: "brightness(1.5) drop-shadow(0 0 20px currentColor)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -96,6 +108,9 @@ export default {
         "fly-in": "fly-in 1.5s ease-out forwards",
         marquee: "marquee 30s linear infinite",
         "fade-in-up": "fade-in-up 0.8s ease-out",
+        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+        glow: "glow 2s ease-in-out infinite",
       },
     },
   },
