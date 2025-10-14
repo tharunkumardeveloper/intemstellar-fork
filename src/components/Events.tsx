@@ -73,7 +73,7 @@ const Events = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">
-            Featured <span className="text-primary text-glow">Events</span>
+            Featured <span className="text-primary">Events</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Four epic events inspired by the most captivating web series

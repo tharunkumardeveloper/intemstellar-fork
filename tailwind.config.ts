@@ -97,8 +97,8 @@ export default {
           "100%": { transform: "translateX(100%)" },
         },
         glow: {
-          "0%, 100%": { filter: "brightness(1) drop-shadow(0 0 10px currentColor)" },
-          "50%": { filter: "brightness(1.5) drop-shadow(0 0 20px currentColor)" },
+          "0%, 100%": { filter: "brightness(1)" },
+          "50%": { filter: "brightness(1)" },
         },
       },
       animation: {

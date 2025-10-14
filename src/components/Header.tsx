@@ -23,16 +23,15 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-background/95 backdrop-blur-lg shadow-lg shadow-primary/10" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/95 backdrop-blur-lg shadow-lg shadow-primary/10" : "bg-transparent"
+        }`}
     >
       {/* Main Header */}
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="text-2xl md:text-3xl font-bold tracking-tight">
-            In<span className="text-primary text-glow">TEMS</span>tellar
+            In<span className="text-primary">TEMS</span>tellar
           </a>
 
           {/* Desktop Navigation */}
@@ -41,7 +40,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
+                className="text-primary font-medium"
               >
                 {link.name}
               </a>
@@ -67,7 +66,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium py-2"
+                className="text-primary font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}

@@ -40,7 +40,7 @@ const EventCard = ({ title, theme, tagline, coordinators, image, accentColor, de
         
         {/* Accent Glow - Multiple Layers */}
         <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-all duration-700 animate-pulse-slow"
+          className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-all duration-700"
           style={{
             background: `radial-gradient(circle at 50% 50%, ${accentColor}, transparent 50%)`,
           }}
@@ -62,13 +62,13 @@ const EventCard = ({ title, theme, tagline, coordinators, image, accentColor, de
       {/* Content */}
       <div className="absolute inset-0 p-8 flex flex-col justify-end">
         <div className="transform transition-all duration-700 group-hover:-translate-y-6 group-hover:scale-105">
-          <p className="text-sm font-semibold text-muted-foreground mb-2 tracking-wider uppercase transform transition-all duration-500 group-hover:tracking-widest group-hover:text-primary animate-float">
+          <p className="text-sm font-semibold text-muted-foreground mb-2 tracking-wider uppercase transform transition-all duration-500 group-hover:tracking-widest animate-float">
             Theme: {theme}
           </p>
-          <h3 className="text-3xl md:text-4xl font-bold mb-3 text-foreground group-hover:text-glow transition-all duration-500 group-hover:scale-110 origin-left">
+          <h3 className="text-3xl md:text-4xl font-bold mb-3 text-foreground transition-all duration-500 group-hover:scale-110 origin-left">
             {title}
           </h3>
-          <p className="text-lg md:text-xl font-semibold mb-6 transition-all duration-500 group-hover:scale-105 origin-left animate-pulse-slow" style={{ color: accentColor }}>
+          <p className="text-lg md:text-xl font-semibold mb-6 transition-all duration-500 group-hover:scale-105 origin-left" style={{ color: accentColor }}>
             {tagline}
           </p>
 
@@ -78,7 +78,7 @@ const EventCard = ({ title, theme, tagline, coordinators, image, accentColor, de
               isHovered ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-95"
             }`}
           >
-            <p className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-widest animate-pulse-slow">
+            <p className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-widest">
               Coordinators
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -91,9 +91,9 @@ const EventCard = ({ title, theme, tagline, coordinators, image, accentColor, de
                     boxShadow: isHovered ? `0 0 20px ${accentColor}30` : 'none'
                   }}
                 >
-                  <p className="font-semibold text-foreground text-sm transition-colors duration-300 hover:text-primary">{coord.name}</p>
-                  <p className="text-xs text-muted-foreground transition-colors duration-300 hover:text-foreground">{coord.phone}</p>
-                  <p className="text-xs font-medium transition-colors duration-300" style={{ color: accentColor }}>{coord.year}</p>
+                  <p className="font-semibold text-foreground text-sm">{coord.name}</p>
+                  <p className="text-xs text-muted-foreground">{coord.phone}</p>
+                  <p className="text-xs font-medium" style={{ color: accentColor }}>{coord.year}</p>
                 </div>
               ))}
             </div>
@@ -103,7 +103,7 @@ const EventCard = ({ title, theme, tagline, coordinators, image, accentColor, de
 
       {/* Enhanced Border Glow on Hover */}
       <div
-        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none animate-pulse-slow"
+        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none"
         style={{
           boxShadow: `0 0 60px ${accentColor}, 0 0 100px ${accentColor}80, inset 0 0 40px ${accentColor}20`,
         }}

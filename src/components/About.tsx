@@ -46,9 +46,9 @@ const About = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up hover:scale-102 transition-transform duration-300 cursor-default">
-            About <span className="text-primary text-glow animate-pulse-slow">InTEMStellar</span>
+            About <span className="text-primary">InTEMStellar</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up hover:text-foreground transition-colors duration-300" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             InTEMStellar is an intercollegiate symposium celebrating creativity, storytelling, and innovation inspired by the world of web series. Join us for an unforgettable experience that blends entertainment, technology, and competition.
           </p>
         </div>
@@ -66,10 +66,10 @@ const About = () => {
                   <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-all duration-300">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  <p className="text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -91,10 +91,10 @@ const About = () => {
               className="text-center animate-fade-in-up group cursor-default"
               style={{ animationDelay: `${0.4 + index * 0.1}s` }}
             >
-              <div className="text-4xl md:text-5xl font-bold text-primary text-glow mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                 {stat.number}
               </div>
-              <div className="text-muted-foreground font-medium group-hover:text-foreground transition-colors duration-300">{stat.label}</div>
+              <div className="text-muted-foreground font-medium">{stat.label}</div>
             </div>
           ))}
         </div>

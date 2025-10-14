@@ -22,7 +22,7 @@ const Footer = () => {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="text-muted-foreground"
               >
                 {link}
               </a>

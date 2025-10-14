@@ -89,7 +89,6 @@ const Header3D: React.FC = () => {
             rotationX: Math.cos(scrollY * 0.008) * 2,
             z: scrollProgress * -20,
             transformOrigin: "center center",
-            filter: `hue-rotate(${scrollProgress * 30}deg) brightness(${1 + scrollProgress * 0.2})`,
           });
         }
 
@@ -139,7 +138,6 @@ const Header3D: React.FC = () => {
         rotationY: 5,
         z: 20,
         transformOrigin: "center center",
-        textShadow: "0 10px 20px rgba(59, 130, 246, 0.5)",
       });
     } else {
       gsap.to(navItem, {
@@ -149,7 +147,6 @@ const Header3D: React.FC = () => {
         rotationX: 0,
         rotationY: 0,
         z: 0,
-        textShadow: "none",
       });
     }
   };
@@ -249,26 +246,6 @@ const Header3D: React.FC = () => {
               rotationX: 3,
               z: 15,
               transition: { duration: 0.4, ease: "backOut" }
-            }}
-            onHoverStart={() => {
-              if (logoRef.current) {
-                gsap.to(logoRef.current, {
-                  duration: 0.6,
-                  ease: "power2.out",
-                  textShadow: "0 0 30px rgba(59, 130, 246, 1), 0 0 60px rgba(59, 130, 246, 0.6), 0 0 90px rgba(59, 130, 246, 0.3)",
-                  filter: "brightness(1.2) contrast(1.1)",
-                });
-              }
-            }}
-            onHoverEnd={() => {
-              if (logoRef.current) {
-                gsap.to(logoRef.current, {
-                  duration: 0.4,
-                  ease: "power2.out",
-                  textShadow: "none",
-                  filter: "brightness(1) contrast(1)",
-                });
-              }
             }}
           >
             {/* "In" with subtle animation */}

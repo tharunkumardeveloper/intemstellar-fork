@@ -359,7 +359,6 @@ const EventCard3D: React.FC<EventCard3DProps> = ({
                 className="text-3xl md:text-4xl font-bold mb-3 text-foreground"
                 animate={{
                   scale: isHovered ? 1.1 : 1,
-                  textShadow: isHovered ? `0 0 20px ${accentColor}` : "none",
                 }}
                 transition={{ duration: 0.5 }}
                 style={{ transformOrigin: "left" }}
@@ -372,7 +371,6 @@ const EventCard3D: React.FC<EventCard3DProps> = ({
                 style={{ color: accentColor }}
                 animate={{
                   scale: isHovered ? 1.05 : 1,
-                  textShadow: isHovered ? `0 0 15px ${accentColor}` : "none",
                 }}
                 transition={{ duration: 0.5 }}
                 style={{ transformOrigin: "left" }}
