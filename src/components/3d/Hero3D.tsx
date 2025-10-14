@@ -276,7 +276,8 @@ const Hero3D: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pb-0"
+      className="relative flex items-center justify-center overflow-hidden pb-0"
+      style={{ height: '50vh', minHeight: '400px' }}
     >
       
       {/* Content Overlay with Spectacular Entrance */}
@@ -285,7 +286,7 @@ const Hero3D: React.FC = () => {
         <h1 
           className="text-6xl md:text-8xl font-bold mb-8 opacity-0 hardware-accelerated"
           style={{ 
-            animation: "spectacularFadeInUp 1.2s ease-out 0.5s forwards",
+            animation: "spectacularFadeInUp 0.8s ease-out 0.2s forwards",
           }}
         >
           In<span className="text-primary">TEMS</span>tellar
@@ -295,7 +296,7 @@ const Hero3D: React.FC = () => {
         <p 
           className="text-xl md:text-3xl text-muted-foreground mb-4 opacity-0 transform translate-y-10 hover:text-foreground transition-colors duration-500 hardware-accelerated" 
           style={{ 
-            animation: "spectacularFadeInUp 0.8s ease-out 0.6s forwards",
+            animation: "spectacularFadeInUp 0.7s ease-out 0.4s forwards",
           }}
         >
           Where Creativity Streams Beyond Limits
@@ -303,7 +304,7 @@ const Hero3D: React.FC = () => {
         <p 
           className="text-lg md:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto opacity-0 transform translate-y-10 hover:text-foreground transition-colors duration-500 hardware-accelerated" 
           style={{ 
-            animation: "spectacularFadeInUp 0.8s ease-out 1.0s forwards",
+            animation: "spectacularFadeInUp 0.7s ease-out 0.6s forwards",
           }}
         >
           An intercollegiate symposium celebrating innovation, storytelling, and creativity inspired by the world of web series
@@ -313,7 +314,7 @@ const Hero3D: React.FC = () => {
         <div 
           className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 transform translate-y-10 hardware-accelerated" 
           style={{ 
-            animation: "spectacularFadeInUp 0.8s ease-out 1.4s forwards",
+            animation: "spectacularFadeInUp 0.7s ease-out 0.8s forwards",
           }}
         >
           <Button
@@ -333,12 +334,6 @@ const Hero3D: React.FC = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-primary rounded-full animate-pulse" />
-        </div>
-      </div>
     </section>
   );
 };

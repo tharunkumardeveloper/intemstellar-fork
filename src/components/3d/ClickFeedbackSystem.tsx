@@ -70,7 +70,7 @@ const ClickFeedbackSystem: React.FC<ClickFeedbackSystemProps> = ({
   // Clean up expired effects
   useFrame(() => {
     const now = Date.now();
-    setClickEffects(prev => 
+    setClickEffects(prev =>
       prev.filter(effect => now - effect.startTime < effect.duration)
     );
   });
@@ -94,14 +94,14 @@ const ClickEffectRing: React.FC<{ effect: ClickEffect }> = ({ effect }) => {
 
     const elapsed = Date.now() - effect.startTime;
     const progress = elapsed / effect.duration;
-    
+
     if (progress >= 1) return;
 
     // Animate expanding ring
     if (ringRef.current) {
       const scale = 1 + progress * 3 * effect.intensity;
       ringRef.current.scale.setScalar(scale);
-      
+
       const opacity = Math.max(0, 1 - progress);
       if (ringRef.current.material instanceof THREE.MeshBasicMaterial) {
         ringRef.current.material.opacity = opacity;
@@ -112,7 +112,7 @@ const ClickEffectRing: React.FC<{ effect: ClickEffect }> = ({ effect }) => {
     if (particlesRef.current) {
       const particleScale = 1 + progress * 2;
       particlesRef.current.scale.setScalar(particleScale);
-      
+
       if (particlesRef.current.material instanceof THREE.PointsMaterial) {
         particlesRef.current.material.opacity = Math.max(0, 1 - progress * 1.5);
       }
@@ -123,15 +123,15 @@ const ClickEffectRing: React.FC<{ effect: ClickEffect }> = ({ effect }) => {
   const particleCount = 20;
   const positions = new Float32Array(particleCount * 3);
   const colors = new Float32Array(particleCount * 3);
-  
+
   for (let i = 0; i < particleCount; i++) {
     const angle = (i / particleCount) * Math.PI * 2;
     const radius = 0.1 + Math.random() * 0.3;
-    
+
     positions[i * 3] = Math.cos(angle) * radius;
     positions[i * 3 + 1] = Math.sin(angle) * radius;
     positions[i * 3 + 2] = (Math.random() - 0.5) * 0.2;
-    
+
     colors[i * 3] = effect.color.r;
     colors[i * 3 + 1] = effect.color.g;
     colors[i * 3 + 2] = effect.color.b;
@@ -149,7 +149,7 @@ const ClickEffectRing: React.FC<{ effect: ClickEffect }> = ({ effect }) => {
           side={THREE.DoubleSide}
         />
       </mesh>
-      
+
       {/* Particle burst */}
       <points ref={particlesRef}>
         <bufferGeometry>
