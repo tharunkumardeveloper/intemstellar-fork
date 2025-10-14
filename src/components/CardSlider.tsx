@@ -88,7 +88,7 @@ const CardSlider: React.FC<CardSliderProps> = ({
   const duplicatedImages = [...images, ...images, ...images];
 
   return (
-    <section className="relative py-16">
+    <section className="relative pt-8 pb-16">
       <div className="container mx-auto px-6">
         <h2 
           className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground opacity-0"

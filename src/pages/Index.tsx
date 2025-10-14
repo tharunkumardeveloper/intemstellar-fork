@@ -46,11 +46,11 @@ const Index = () => {
         ]}
         autoScrollSpeed={8}
       />
-      <AnimatedSection animationType="slide" intensity="medium">
-        <Events3D />
-      </AnimatedSection>
       <AnimatedSection animationType="slide" intensity="light">
         <About />
+      </AnimatedSection>
+      <AnimatedSection animationType="slide" intensity="medium">
+        <Events3D />
       </AnimatedSection>
       <AnimatedSection animationType="slide" intensity="light">
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Loading...</div></div>}>
