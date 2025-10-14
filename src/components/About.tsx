@@ -1,4 +1,5 @@
 import { Sparkles, Trophy, Users, Zap } from "lucide-react";
+import FadeInSection from "./FadeInSection";
 
 const About = () => {
   const features = [
@@ -30,20 +31,15 @@ const About = () => {
       className="py-24 relative overflow-hidden" 
       style={{ 
         scrollMarginTop: '80px',
-        backgroundImage: 'url(/src/assets/hero-bg.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
       }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/70" />
       
       {/* Decorative Elements */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
+        <FadeInSection>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up hover:scale-102 transition-transform duration-300 cursor-default">
             About <span className="text-primary">InTEMStellar</span>
@@ -98,6 +94,7 @@ const About = () => {
             </div>
           ))}
         </div>
+        </FadeInSection>
       </div>
     </section>
   );

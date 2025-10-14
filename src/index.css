@@ -112,7 +112,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    background: var(--gradient-cosmic);
     position: relative;
     -webkit-user-select: none;
     user-select: none;

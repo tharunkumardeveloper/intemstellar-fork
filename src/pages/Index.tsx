@@ -12,7 +12,15 @@ const Contact = lazy(() => import("@/components/Contact"));
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
+    <div 
+      className="min-h-screen bg-background text-foreground relative"
+      style={{
+        backgroundImage: 'linear-gradient(to bottom, rgba(18, 18, 23, 0.7), rgba(18, 18, 23, 0.85)), url(/src/assets/hero-bg.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundAttachment: 'fixed',
+      }}
+    >
       {/* Global 3D Scene with Hero 3D content - Reduced particle count for better performance */}
       <Scene3D enableParticles={true} particleCount={200} showStats={false}>
         {/* Hero 3D Scene with all complex 3D elements */}
@@ -25,10 +33,10 @@ const Index = () => {
       <AnimatedSection animationType="slide" intensity="medium">
         <Events3D />
       </AnimatedSection>
-      <AnimatedSection animationType="morph" intensity="light">
+      <AnimatedSection animationType="slide" intensity="light">
         <About />
       </AnimatedSection>
-      <AnimatedSection animationType="scale" intensity="light">
+      <AnimatedSection animationType="slide" intensity="light">
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Loading...</div></div>}>
           <Contact />
         </Suspense>

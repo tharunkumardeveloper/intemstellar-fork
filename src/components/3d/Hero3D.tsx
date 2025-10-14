@@ -277,15 +277,7 @@ const Hero3D: React.FC = () => {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pb-0"
-      style={{
-        backgroundImage: `url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
     >
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/70" />
       
       {/* Content Overlay with Spectacular Entrance */}
       <div className="container mx-auto px-6 text-center z-10 mt-20 hardware-accelerated">
@@ -303,7 +295,7 @@ const Hero3D: React.FC = () => {
         <p 
           className="text-xl md:text-3xl text-muted-foreground mb-4 opacity-0 transform translate-y-10 hover:text-foreground transition-colors duration-500 hardware-accelerated" 
           style={{ 
-            animation: "spectacularFadeInUp 1.2s ease-out 1.0s forwards",
+            animation: "spectacularFadeInUp 0.8s ease-out 0.6s forwards",
           }}
         >
           Where Creativity Streams Beyond Limits
@@ -311,17 +303,17 @@ const Hero3D: React.FC = () => {
         <p 
           className="text-lg md:text-xl text-foreground/70 mb-10 max-w-3xl mx-auto opacity-0 transform translate-y-10 hover:text-foreground transition-colors duration-500 hardware-accelerated" 
           style={{ 
-            animation: "spectacularFadeInUp 1.2s ease-out 1.5s forwards",
+            animation: "spectacularFadeInUp 0.8s ease-out 1.0s forwards",
           }}
         >
           An intercollegiate symposium celebrating innovation, storytelling, and creativity inspired by the world of web series
         </p>
         
-        {/* Action Buttons with explosive entrance */}
+        {/* Action Buttons with same entrance as text */}
         <div 
-          className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 transform translate-y-20 scale-75 hardware-accelerated" 
+          className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 transform translate-y-10 hardware-accelerated" 
           style={{ 
-            animation: "explosiveEntrance 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2.0s forwards",
+            animation: "spectacularFadeInUp 0.8s ease-out 1.4s forwards",
           }}
         >
           <Button

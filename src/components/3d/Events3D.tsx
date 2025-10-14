@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import EventCard3D from './EventCard3D';
+import FadeInSection from '@/components/FadeInSection';
 import brandoVationImg from "@/assets/brand-o-vation.jpg";
 import paradoxProtocolImg from "@/assets/paradox-protocol.jpg";
 import venturaImg from "@/assets/ventura.jpg";
@@ -180,14 +181,8 @@ const Events3D: React.FC = () => {
       className="pt-24 pb-24 relative overflow-hidden perspective-1000" 
       style={{ 
         scrollMarginTop: '80px',
-        backgroundImage: 'url(/src/assets/hero-bg.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
       }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/70" />
       
       {/* Background Pattern with 3D depth */}
       <div className="absolute inset-0 opacity-5">
@@ -199,11 +194,9 @@ const Events3D: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10" ref={containerRef}>
+        <FadeInSection>
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 50, rotateX: -15 }}
-          animate={{ opacity: 1, y: 0, rotateX: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
         >
           <motion.h2 
             className="text-4xl md:text-6xl font-bold mb-4"
@@ -258,6 +251,7 @@ const Events3D: React.FC = () => {
 
 
         </div>
+        </FadeInSection>
       </div>
 
       {/* Enhanced 3D Environment Lighting Effects */}

@@ -73,20 +73,12 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
     const baseVariants = {
       slide: {
         hidden: { 
-          opacity: 0, 
-          y: 150 * intensityMultiplier,
-          scale: 0.8,
-          rotateX: enable3D ? -15 : 0,
-          z: enable3D ? -100 : 0,
+          opacity: 0,
         },
         visible: { 
-          opacity: 1, 
-          y: 0,
-          scale: 1,
-          rotateX: 0,
-          z: 0,
+          opacity: 1,
           transition: { 
-            duration: duration * 1.2,
+            duration: duration * 0.8,
             ease: [0.25, 0.46, 0.45, 0.94],
             staggerChildren: 0.15,
             delayChildren: 0.1,
