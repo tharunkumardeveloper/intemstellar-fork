@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Event sites node_modules and dist
+brand-o-vation-site/node_modules
+brand-o-vation-site/dist
+ventura-site/node_modules
+ventura-site/dist
+paradox-protocol-site/node_modules
+paradox-protocol-site/dist
+capitalyze-site/node_modules
+capitalyze-site/dist
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

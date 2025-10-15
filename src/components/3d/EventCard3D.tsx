@@ -247,7 +247,7 @@ const EventCard3D: React.FC<EventCard3DProps> = ({
     >
       {/* Card Container with 3D transforms */}
       <motion.div
-        className="relative w-full h-[450px] md:h-[540px]"
+        className="relative w-full h-[580px] md:h-[680px]"
         style={{
           transformStyle: "preserve-3d",
         }}
@@ -437,8 +437,57 @@ const EventCard3D: React.FC<EventCard3DProps> = ({
               ))}
             </div>
             
+            <motion.button
+              className="mt-6 w-full py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300"
+              style={{ 
+                backgroundColor: accentColor,
+                boxShadow: `0 0 20px ${accentColor}40`,
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: coordinators.length * 0.1 + 0.1, duration: 0.5 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: `0 0 30px ${accentColor}60`,
+              }}
+              whileTap={{ scale: 0.95 }}
+              onClick={(e) => {
+                e.stopPropagation();
+                
+                let eventUrl = "";
+                
+                // Route to appropriate event site
+                if (title === "Brand-o-Vation") {
+                  eventUrl = import.meta.env.DEV 
+                    ? "http://localhost:3000" 
+                    : "/brand-o-vation-site/";
+                } else if (title === "Ventura") {
+                  eventUrl = import.meta.env.DEV 
+                    ? "http://localhost:4000" 
+                    : "/ventura-site/";
+                } else if (title === "The Paradox Protocol") {
+                  eventUrl = import.meta.env.DEV 
+                    ? "http://localhost:5000" 
+                    : "/paradox-protocol-site/";
+                } else if (title === "Capitalyze") {
+                  eventUrl = import.meta.env.DEV 
+                    ? "http://localhost:6000" 
+                    : "/capitalyze-site/";
+                } else {
+                  // Handle registration for other events
+                  alert(`Registration for ${title} coming soon!`);
+                  return;
+                }
+                
+                const newWindow = window.open(eventUrl, "_blank", "noopener,noreferrer");
+                if (newWindow) newWindow.opener = null;
+              }}
+            >
+              Register Now
+            </motion.button>
+            
             <motion.div
-              className="text-xs text-muted-foreground opacity-60 text-center mt-6"
+              className="text-xs text-muted-foreground opacity-60 text-center mt-4"
             >
               Click to flip back ←
             </motion.div>

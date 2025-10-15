@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Squid Game Inspired Color System */
+    --background: 0 0% 0%; /* Pure Black */
+    --foreground: 0 0% 100%; /* Pure White */
+
+    --card: 0 0% 7%; /* Deep Charcoal */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 346 100% 52%; /* Squid Game Red */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 11%; /* Darker Charcoal */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 330 100% 50%; /* Neon Pink */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 346 100% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 346 100% 52%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Ventura Design Tokens */
+    --squid-red: 346 100% 52%;
+    --neon-pink: 330 100% 50%;
+    --charcoal: 0 0% 7%;
+    --deep-black: 0 0% 0%;
+    --glow-red: 346 100% 52%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 7%) 50%, hsl(346 100% 10%) 100%);
+    --gradient-dark-magenta: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(300 50% 8%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 7%) 0%, hsl(0 0% 4%) 100%);
+    --gradient-radial-glow: radial-gradient(circle at center, hsla(346, 100%, 52%, 0.2) 0%, transparent 70%);
+    --gradient-spotlight: radial-gradient(ellipse at top, hsla(346, 100%, 52%, 0.15), transparent 50%);
+    
+    /* Shadows & Glows */
+    --glow-primary: 0 0 20px hsla(346, 100%, 52%, 0.6);
+    --glow-intense: 0 0 40px hsla(346, 100%, 52%, 0.8);
+    --glow-neon: 0 0 60px hsla(330, 100%, 50%, 0.6);
+    --shadow-card: 0 10px 40px hsla(0, 0%, 0%, 0.8);
+    --shadow-deep: 0 20px 60px hsla(0, 0%, 0%, 0.9);
+    
+    /* Ambient effects */
+    --fog-opacity: 0.3;
+    --particle-glow: hsla(346, 100%, 52%, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.05em;
+  }
+  
+  .font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .text-glow {
+    text-shadow: var(--glow-primary);
+  }
+  
+  .text-glow-intense {
+    text-shadow: var(--glow-intense);
+  }
+  
+  .box-glow {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .box-glow-intense {
+    box-shadow: var(--glow-intense);
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsla(346, 100%, 52%, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px hsla(346, 100%, 52%, 0.8);
+    }
+  }
+  
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes mask-blink {
+    0%, 90%, 100% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes ambient-pulse {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+  
+  @keyframes fog-drift {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(100px) translateY(50px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-flicker {
+    animation: flicker 2s ease-in-out infinite;
+  }
+  
+  .animate-mask-blink {
+    animation: mask-blink 4s ease-in-out infinite;
+  }
+  
+  .animate-ambient-pulse {
+    animation: ambient-pulse 3s ease-in-out infinite;
+  }
+  
+  .animate-fog-drift {
+    animation: fog-drift 20s ease-in-out infinite alternate;
+  }
+  
+  /* Cinematic fog effect */
+  .cinematic-fog {
+    background: radial-gradient(ellipse at center, hsla(0, 0%, 100%, var(--fog-opacity)) 0%, transparent 70%);
+    filter: blur(60px);
+  }
+  
+  /* Particle glow */
+  .particle-glow {
+    box-shadow: 0 0 20px var(--particle-glow);
+  }
+}

@@ -144,6 +144,12 @@ const CardSlider: React.FC<CardSliderProps> = ({
                 key={index}
                 className="flex-shrink-0 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer"
                 style={{ width: 'auto', height: '220px' }}
+                onClick={() => {
+                  const eventsSection = document.getElementById('events');
+                  if (eventsSection) {
+                    eventsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
               >
                 <img
                   src={image}
