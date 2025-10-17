@@ -32,3 +32,4 @@ capitalyze-site/dist
 *.njsproj
 *.sln
 *.sw?
+.env
